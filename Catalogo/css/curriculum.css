@@ -1,0 +1,47 @@
+.ui-widget-content {
+	background-color: #FDFDFD;
+}
+
+.divRedondeado {
+
+	border-radius: 15px;
+    border-color: #D6DADD;
+    box-shadow: none;
+    padding: 4px 12px;
+    background-color: #FFFFFF;
+    border-width: 1px;
+    border-style: solid;
+    margin: 5px;
+}
+
+/* CV.html */
+
+.left{
+	position: absolute;
+	width: 25%;
+
+background-color: #337ab7;
+min-height: 100vh;
+z-index: 100;
+}
+
+.right{
+	background-color: #E3E7F5;
+	min-height: 100vh;
+	z-index: 101;
+}
+.container{
+	z-index: 103;
+}
+.imgSelphi1{
+	z-index: 104;
+}
+.imgSelphi2{
+	position: absolute;
+	left: 70%;
+	top:5%;
+	min-height: 200px;
+	width: 70%;
+	z-index: 105;
+	background-color: transparent;
+}

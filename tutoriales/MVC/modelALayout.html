@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Agregar modelo de datos al layout</title>
+	<link rel="stylesheet" type="text/css" href="../css/codigo.css">
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://www.javyjaja.com/"><i class="fa fa-home"></i>  Home\</a>
+                <a class="navbar-brand" href="http://www.javyjaja.com/Tutoriales.html">Tutoriales\</a>
+                <a class="navbar-brand" href="http://www.javyjaja.com/tutoriales/MVC/Index.html">Indice</a>
+            </div>
+		</div>
+	</nav>
+	<p>NAVBAR<br/><br/></p>
+<section class="container">
+<h1  ALIGN="CENTER">Agregar modelo de datos a layout</h1>
+
+<article class="col-md-9" ><p>Supongamos que tenemos que agregar al layout(Layout.cshtml o cualquier otro master que tengamos) datos dinamicos como puidera ser un MENU, nombre de usuario,etc; Osea agregar un modelo para el layout.</p>
+<br />
+<p>Bueno no se si sea la forma mas correcta, pero lo que ago es lo siguiente.</p></article>
+
+<div class="row">
+	<div class="col-md-5  vertical-center">
+		<h4>En el Controlador:</h4>
+		Agregamos un metodo, que nos debuelba el tipo de entidad de el stored o tabla que querramos llamar.
+		<smoll>En este caso es un storedProcedure</smoll>
+	</div>
+	<div class="col-md-7">
+		<pre class="pre">
+<span class="res">public class</span> <span class="nomb">MyController</span> <span class="var">:</span> <span class="nomb">Controller</span>
+	{
+    	private myModel db = new MyModel();
+        		
+    	public SP_MyStoredProcedure_Result MyEntidad(int? id)
+    	{
+       		List<SP_MyStoredProcedure_Result> MyEntidad = db.SP_MyStoredProcedure(id).ToList<SP_MyStoredProcedure_Result>();
+          		
+       		return (MyEntidad[0]);
+    	}
+    	<span class="come">//...
+    	//Demas codigo del controlador
+    	//...</span>
+    }
+		</pre>
+	</div>
+		<div class="col-md-5  vertical-center">
+		<h4>En el _Layout.cshtml:</h4>
+		Creamos una variable para que contenga el modelo, creamos una instancia de nuedtro controlador y por ultimo agregamos el metodo que traera los datos para llenar la entidad.
+		
+	</div>
+	<div class="col-md-7">
+		<pre class="pre">
+@{
+	var Myobjeto = new MyController();
+    var model = (SP_MyStoredProcedure_Result)Myobjeto.MyEntidad(id);
+}
+          
+&lt!DOCTYPE html&gt
+&lthtml lang="en"&gt
+&lthead&gt
+<span class="come">
+	//...
+    	//Demas codigo HTML del Layout
+    	//...</span>
+		</pre>
+	</div>
+
+	<div class="col-md-5  vertical-center">
+		<h4>En el _Layout.cshtml al utilizarlo:</h4>
+		Despues de que ya tenemos el modelo, ya lo podemos utilizar como cualquier vista, por ejemplo.
+		
+	</div>
+	<div class="col-md-7">
+		<pre class="pre">
+&ltdiv class="profile-data"&gt
+    &ltdiv&gt class="profile-data-name">@Html.DisplayFor(Model => model.strNombre)&lt/div&gt
+	&ltdiv&gt class="profile-data-title">@Html.DisplayFor(Model => model.strRazonSocial)&lt/div&gt
+&lt/div&gt
+		</pre>
+	</div>
+
+</div>
+</section>
+<footer class="footer">
+	<br />
+	<br />
+</footer>
+</body>
+</html>

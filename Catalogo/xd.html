@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<title>javyjaja</title>
+    
+	<!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/modern-business.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="css/responsive.css">
+	
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+</head>
+<body onload="document.getElementById('cargando').style.display='none';">
+<div id="cargando" style="width: 100%; height: 100%; text-align: center"><img src="img/load.gif" /></div>
+	<div class="container">
+		<div class="row text-center">
+			<div class="col-xs-12">
+				<span>Para poder hacer esta operacion, Necesitas iniciar sesion:</span>
+			</div>
+			<div class="col-xs-3">&nbsp;</div>
+			<div class="col-xs-6">
+				<button class="btn btn-primary">Boton de Facebook</button>
+			</div>
+			<div class="col-xs-3">&nbsp;</div>
+			<div class="col-xs-12">
+				ó
+			</div>
+			<div class="col-xs-2 divAncho">&nbsp;</div>
+			<div class="col-xs-8">
+				<input type="text" id="txtUsername" class="form-control" placeholder="Usuario"></input>
+			</div>
+			<div class="col-xs-2 divAncho">&nbsp;</div>
+			<div class="col-xs-2 divAncho">&nbsp;</div>
+			<div class="col-xs-8">
+				<input type="text" id="txtpassword" class="form-control" placeholder="Contraseña"></input>
+			</div>
+			<div class="col-xs-2 divAncho">&nbsp;</div>
+			<div class="col-xs-12 divAncho">
+			<button class="btn btn-primary btn-xs" onclick="login();return false;">Ingresar</button>
+			</div>
+			<div class="col-xs-12">
+				Si no tienes una cuenta, crea una haciendo clic <a href="crearCuenta.html">AQUI.</a>
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery.js"></script>
+		<script>
+	function login(){
+		var txtUsername2 = document.getElementById('txtUsername').value;
+		var txtpassword2 = document.getElementById('txtpassword').value; 
+		var jsonx = {'txtUsername' : txtUsername2 , 'txtpassword': txtpassword2};		
+		$.ajax({
+					url: "php/logIn.php",
+					type: "get",
+					data:  jsonx,
+					cache: false					
+					})
+                .done(function(res){
+                    ee(res);
+                }
+				
+				)
+				.fail(function(res){ee(res)})
+				;
+	}
+	
+			
+			
+	function ee(e)
+{
+if(e.trim() == '1'){
+alert('logeado correctamente');
+}else if(e.trim() =='0'){alert('usuario o contraseña invalidos');
+
+}else{alert(e);}
+}	
+	</script>
+	
+</body>
+</html>

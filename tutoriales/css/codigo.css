@@ -1,0 +1,30 @@
+.pre {
+  background-color:#F1F1F1;
+  border:1px solid #00000;
+  padding:10px;
+  overflow:auto;
+  margin:7px;
+  
+  }
+
+  .centVertical{
+  	 vertical-align:middle;
+  }
+
+  .net{
+color: #33DDAA;
+  }
+  .res{
+  	color: #013ADF;
+  }
+  .nomb{
+  	color: #81DAF5;
+  }
+  .var{
+  	color: #000000;
+  }
+  .come
+  {
+  	color: #2EFE2E;
+  }
+

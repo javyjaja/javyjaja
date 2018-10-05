@@ -1,0 +1,51 @@
+.abajo{	position: absolute;	bottom:0px;	text-align:center;width:100%;}
+.arriba{vertical-aling:top;}
+.badge{ position:relative;left: -18px;top:10px;background-color:Red;}
+.barra{padding-top:1%;}
+.centrado{text-align:center; vertical-align:middle; min-height:100%;}
+.Cuadro{background-color: #AA0055;}
+.cuadroChico{border: 1px #a6c9e2 solid;	border-top-left-radius: 10px;height:175px;padding: 5px;	margin:5px;}
+.derecha{text-align:right;}
+.divAncho{ height: 34px;}
+.divBuscar{position: absolute;width: 40%;top:2px;left:20%;}
+.divTabs{max-height:550px; overflow:hidden;}
+/*.divTabs div{max-height:450px; overflow:auto;}*/
+.fill{}
+.fondoAzul{	background-color:rgb(102, 178, 255);}
+.desCV{font-size:13px;font-weight:bold;color:#333; font-family:Trebuchet MS,Tahoma,Verdana,Arial,sans-serif;}
+.iconos{cursor: pointer; border: 1px solid transparent;}
+.iconos:hover{border: 1px solid #B7D6FD;}
+
+.imagenMediana{	min-height:200px;height: 200px;	max-height:200px; padding-bottom:10px;}
+.imgchica{max-width: 100%;	max-height:100%;vertical-align: middle;margin: 0 auto;}
+                  
+.imgCV{padding-top:0px;padding-left:60px;padding-right:20px;padding-bottom:2px;}
+.imgCV img{width:80%;}
+ .imglogo{height: 45px;}
+.imgSlide{width: 100%;vertical-align: middle;margin: 0 auto;}
+.izquierda{text-align:center; padding-top:5%;}
+.letras{font-family:Roboto;}
+.modalIframe{width:100%; height:100%;overflow:hidden;}
+.pdf{ width:80px;}
+.pdf:hover{ cursor:pointer;width:83px;}
+.subtitulo{	font-size:16px;}
+.subtituloCV{font-size:16px;font-weight:bold;color:#777; font-family:Trebuchet MS,Tahoma,Verdana,Arial,sans-serif;}
+#tabs{min-height:550px;}
+.titulo{font-size:16px;	font-weight:bold;}
+.tituloCV{font-size:20px;	font-weight:bold;color:#777; font-family:Trebuchet MS,Tahoma,Verdana,Arial,sans-serif;}
+@media(min-width:800px){
+	.fill{min-height:450px;height: 450px;max-height:450px;}
+}
+/*tablet*/
+@media(max-width: 800px){
+	.Cuadro{background-color: #BBAAFF;}
+	.cuadroChico{display:inline-block;position: relative;height:55px;}
+	.abajo{text-align:right;width:100%;	padding-right: 6px;	}
+	.divBuscar{	width: 80%;	left:1%;}
+	.imglogo{width:90%;}
+	.imgCV img{width:100%;}
+}
+@media (max-width: 767px){
+	.navbar-inverse .navbar-nav .open .dropdown-menu>li>a {color: Black;}
+	.imgCV img{width:100%;}
+}

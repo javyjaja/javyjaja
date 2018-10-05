@@ -1,0 +1,133 @@
+.headerIndex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  background: url(../img/fondo/fondo4.jpg) no-repeat center top;
+  background-size: cover;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch; }
+
+.encabezado {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.encabezado .a {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%; }
+
+.encabezado .a div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 120px; }
+
+.encabezado .a div div {
+  padding-left: 27px; }
+
+.encabezado div {
+  height: 20vh; }
+
+h1 {
+  color: #666666; }
+
+.encabezado .a div:hover h1,
+.encabezado .a div:hover h1 small {
+  color: #030303; }
+
+.flecha-bajar {
+  margin-bottom: 15px;
+  text-align: center; }
+
+.flecha-bajar a {
+  display: inline-block;
+  color: #FFFFFF;
+  font-size: 5rem;
+  -webkit-animation: flecha-animada 2s ease-in-out infinite;
+          animation: flecha-animada 2s ease-in-out infinite; }
+
+@-webkit-keyframes flecha-animada {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  50% {
+    -webkit-transform: translateY(7px);
+            transform: translateY(7px); }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@keyframes flecha-animada {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  50% {
+    -webkit-transform: translateY(7px);
+            transform: translateY(7px); }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+@media (max-width: 1350px) {
+  .flecha-bajar a {
+    color: #fff; } }
+@media screen and (max-width: 1000px) {
+  body {
+    background-color: blue; }
+
+  .about {
+    padding: 30px 0; }
+
+  .services {
+    padding: 5px 0; }
+
+  .service-item {
+    margin-bottom: 5px; }
+
+  .fa, .fas {
+    font-weight: 600; }
+
+  fa-4x {
+    font-size: 3em; } }
+/* Celular Q6+ */
+@media screen and (max-width: 500px) {
+  .flecha-bajar {
+    text-align: center;
+    padding-bottom: 5px;
+    font-size: 3rem; }
+
+  .encabezado {
+    -webkit-box-flex: initial;
+        -ms-flex: initial;
+            flex: initial; }
+
+  h1 {
+    font-size: 26px;
+    color: #030303; }
+
+  h1 small {
+    color: #030303; }
+
+  .btn-light {
+    background-color: rgba(255, 255, 255, 0.4); } }
+
+/*# sourceMappingURL=style.css.map */

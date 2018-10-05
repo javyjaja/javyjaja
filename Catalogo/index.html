@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<title>javyjaja</title>
+    
+	<!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/modern-business.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
+	
+	<link rel="stylesheet" href="css/responsive.css">
+	<link rel="stylesheet" href="css/checkbox.css">
+	
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+</head>
+<body onload="document.getElementById('cargando').style.display='none';">
+<div id="cargando" style="width: 100%; height: 100%; text-align: center"><img src="load.gif" /></div>
+	<div class="header">
+		<!-- NAV -->
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<div class="divBuscar">
+						<div class="row">
+							<div class="col-md-3 col-xs-5">
+								<img class="imglogo" src="img/fondoTransparenteChico.png" alt="fondo">
+							</div>
+							<div class="col-md-9 col-xs-7">
+								<div class="input-group barra">
+									<input type="text" class="form-control">
+									<span class="input-group-addon btn">
+										<i class="fa fa fa-search"></i>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right" id="ulMenu">
+						<!--<li>
+							<a href="about.html">MENU 1</a>
+						</li>
+						<li>
+							<a href="services.html">Menu 2</a>
+						</li>
+						<li>
+							<a href="contact.html">Men 3</a>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Agregar <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="addArticle.html">Producto</a>
+								</li>
+								<li>
+									<a href="portfolio-2-col.html">Submenu 2</a>
+								</li>
+								<li>
+									<a href="portfolio-3-col.html">Sub menius 3</a>
+								</li>
+							</ul>
+						</li>-->
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container -->
+		</nav><!-- NAV_Fin -->
+	</div>
+	<br />
+	<div class="container letras">
+		<div class="row">
+			<div class="col-md-12">&nbsp;&nbsp;&nbsp;</div>
+			<div class="col-md-12">&nbsp;&nbsp;&nbsp;</div>
+			<div class="col-md-12" style="text-align:right;">
+			<img class="iconos" style="width: 35px;" src="img/icon-user-default.png" onclick="mostrarModal('user');return false;" />
+ 			<img class="iconos" style="width: 40px;" src="img/carrito.png" onclick="mostrarModal('carrito');return false;" />
+ 			<span class="badge">2</span>
+
+			</div>
+			<div class="col-md-3 letras">
+				<div class="row">
+					<div class="col-md-12">	
+						<span class="titulo">FILTROS</span>
+					</div>
+					<div class="col-md-12 col-xs-6 arriba">
+						<br />
+						<span class="subtitulo">COLOR</span><br />
+						<div class="checkbox checkbox-success checkbox-inline text-left">
+							<input type="checkbox" id="c1" name="cc">
+							<label for="c1">Azules</label>
+						</div><br />
+						<div class="checkbox checkbox-success checkbox-inline text-left">
+							<input type="checkbox" id="c2" name="cc">
+							<label for="c2">Blancos</label>
+						</div><br />
+						<div class="checkbox checkbox-success checkbox-inline text-left">
+							<input type="checkbox" id="c3" name="cc">
+							<label for="c3">Rojos</label>
+						</div><br />
+						<div class="checkbox checkbox-success checkbox-inline text-left">
+							<input type="checkbox" id="c4" name="cc">
+							<label for="c4">Rosas</label>
+						</div><br />
+						<div class="checkbox checkbox-success checkbox-inline text-left">
+							<input type="checkbox" id="c5" name="cc">
+							<label for="c5">Negros</label>
+						</div><br />
+					</div>
+					<div class="col-md-12 col-xs-6 arriba">
+						<br /><br />
+						<span class="subtitulo">Numero</span><br />
+						<div class="checkbox checkbox-success checkbox-inline text-left">
+							<input type="checkbox" id="c6" name="cc">
+							<label for="c6">8</label>
+						</div><br />
+						<div class="checkbox checkbox-success checkbox-inline text-left">
+							<input type="checkbox" id="c7" name="cc">
+							<label for="c7">9</label>
+						</div><br />
+					</div>
+				</div>
+			</div>
+			<div class="col-md-9 cuadroGrande" id="cuadroGrande">
+				<!--<div id="img1" class="fill Activo" style="display:block;">
+					<div class="col-md-12 text-center"><h3>Tachones Blancos</h3></div>
+					<div class="col-md-12">&nbsp;&nbsp;&nbsp;</div>
+					<div class="col-md-6" >
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<img class="imgSlide" src="img/1.jpg">
+					</div>
+					<div class="col-md-6">
+						<ul>
+							<li>Precio: $800.00</li>
+							<li>Numero: 28.5</li>
+							<li>Marca: Nike</li>
+							<li>Color: Blanco con rojo</li>
+							<li>Tipo: Multitaco</li>
+							<li>Existencia: 2 Pares</li>
+						</ul>
+						<div>
+							<button type="button" class="btn btn-primary">
+								<i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;&nbsp;Agregar
+							</button>
+							<button type="button" class="btn btn-danger">
+								<i class="fa fa-usd" aria-hidden="true"></i>&nbsp;&nbsp;Comprar
+							</button>
+								
+						</div>
+						<br />
+					</div>
+				</div>
+			<div id="img2" class="fill" style="display:none;" >
+				<div class="col-md-12 text-center"><h3>Tachones Blancos NIKE</h3></div>
+				<div class="col-md-12">&nbsp;&nbsp;&nbsp;</div>
+				<div class="col-md-6">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<img class="imgSlide" src="img/2.jpg">
+				</div>
+				<div class="col-md-6">
+					<ul>
+						<li>Precio: $800.00</li>
+						<li>Numero: 28.5</li>
+						<li>Marca: Nike</li>
+						<li>Color: Blanco con rojo</li>
+						<li>Tipo: Multitaco</li>
+						<li>Existencia: 2 Pares</li>
+					</ul>
+					<div>
+						<button type="button" class="btn btn-primary">
+							<i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;&nbsp;Agregar
+						</button>
+						<button type="button" class="btn btn-danger">
+							<i class="fa fa-usd" aria-hidden="true"></i>&nbsp;&nbsp;Comprar
+						</button>
+								
+					</div>
+				</div>
+			</div>
+			<div id="img3" class="fill" style="display:none;">
+				<div class="col-md-12 text-center"><h3>Tachones Rojitos</h3></div>
+				<div class="col-md-12">&nbsp;&nbsp;&nbsp;</div>
+				<div class="col-md-6">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<img class="imgSlide" src="img/3.jpg">
+			</div>
+			<div class="col-md-6">
+			   	<ul>
+				<li>Precio: $800.00</li>
+				<li>Numero: 28.5</li>
+				<li>Marca: Nike</li>
+				<li>Color: Blanco con rojo</li>
+				<li>Tipo: Multitaco</li>
+				<li>Existencia: 2 Pares</li>
+				</ul>
+				<div>
+							<button type="button" class="btn btn-primary">
+								<i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;&nbsp;Agregar
+							</button>
+							<button type="button" class="btn btn-danger">
+								<i class="fa fa-usd" aria-hidden="true"></i>&nbsp;&nbsp;Comprar
+							</button>
+								
+						</div>
+			</div>
+		</div>
+		<div id="img4" class="fill"  style="display:none;">
+		<div class="col-md-12 text-center"><h3>Tachones Rosas</h3></div>
+			<div class="col-md-12">&nbsp;&nbsp;&nbsp;</div>
+			<div class="col-md-6">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<img class="imgSlide" src="img/4.jpg">
+			</div>
+			<div class="col-md-6" >
+		    	<ul>
+				<li>Precio: $800.00</li>
+				<li>Numero: 28.5</li>
+				<li>Marca: Nike</li>
+				<li>Color: Blanco con rojo</li>
+				<li>Tipo: Multitaco</li>
+				<li>Existencia: 2 Pares</li>
+				</ul>
+				<div>
+							<button type="button" class="btn btn-primary">
+								<i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;&nbsp;Agregar
+							</button>
+							<button type="button" class="btn btn-danger">
+								<i class="fa fa-usd" aria-hidden="true"></i>&nbsp;&nbsp;Comprar
+							</button>
+								
+						</div>
+			</div>
+		</div>-->
+	</div>
+</div>
+		</div>
+		
+	<div class="container">		
+	<div class="row">	
+	<div id="slide">
+		
+	</div>
+		</div>
+		</div>
+    
+
+<!-- MODALES -->	
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+         <h4 class="modal-title" id="ModalTitulo">Modal Header</h4>
+      </div>
+      <div id="ModalCuerpo" class="modal-body">
+        <iframe src="load.html" class="modalIframe" id="modalIframe" marginheight="0" marginwidth="0" noresize scrolling="No" frameborder="0"></iframe>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+	<script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+		$('.carousel').carousel({
+			interval: 6000 //changes the speed
+		})
+    </script>
+	
+<script>
+
+function mostrar(nueva)
+{
+$(".Activo").fadeOut(1000,function(){
+$(".Activo").removeClass("Activo");
+	$(eval('"#'+nueva+'"')).addClass("Activo");
+	$(eval('"#'+nueva+'"')).fadeIn(2000);
+});
+var jsonx = {'articuloClave' : nueva};
+$.ajax({
+			url: "php/cargarDetalleArticulo.php",
+			type: "get",
+			cache: false,
+			data: jsonx
+		})
+        .done(function(res){
+           eval("document.getElementById('ul" + nueva + "').innerHTML = res");
+        })
+		.fail(function(res){
+			alert(res)
+		});
+}
+function next()
+{
+$("#img2").fadeOut(4000,function(){
+	$("#img1").fadeIn(4000);
+});
+
+}
+
+</script>	
+<script>
+	function mostrarModal(opcion)
+	{
+		var src = "";
+		var altura = "";
+		switch(opcion){
+			case 'carrito':
+				titulo = "Carrito de Compras";
+				altura = "260px";
+				src = "xd.html";
+			break;
+			case 'user':
+				titulo = "Adminstracion de Usuario"
+				altura = "260px";
+				src = "xd.html";
+		}
+		document.getElementById('ModalTitulo').innerText = titulo;
+		document.getElementById('modalIframe').src=src; 
+		document.getElementById('ModalCuerpo').style.height = altura;
+		$('#myModal').modal('show'); 
+	}
+</script>
+<script>
+$(document).ready(function () {
+			cargarArticulos();
+			cargarMenu();
+		});
+
+		function cargarMenu(){
+			$.ajax({
+				url: "php/cargarMenu.php",
+				type: "get",
+				cache: false					
+			})
+			.done(function(res){
+				respuesta(res);
+			})
+			.fail(function(res){
+				respuesta2(res)
+			});
+		}
+		
+		function respuesta(e){
+			document.getElementById("ulMenu").innerHTML = e;
+		}
+		
+		function respuesta2(e){
+			alert(e);
+		}
+	
+		function cargarArticulos(){
+			$.ajax({
+				url: "php/cargarArticulos.php",
+				type: "get",
+				cache: false					
+			})
+			.done(function(res){
+				var elHTML = res.split('|');
+				document.getElementById("cuadroGrande").innerHTML = elHTML[0];
+				document.getElementById("slide").innerHTML = elHTML[1];
+				cargarDetalle(elHTML[2]);
+			})
+			.fail(function(res){
+				alert(res);
+			});
+		}
+		
+		function cargarDetalle(id){
+				var jsonx = {'articuloId' : id};		
+			$.ajax({
+				url: "php/cargarDetalleArticulo.php",
+				type: "get",
+				data:  jsonx,
+				cache: false					
+			})
+            .done(function(res){
+                document.getElementById("ul"+id).innerHTML = res;
+            })
+			.fail(function(res){
+				alert(res)
+			});
+		}
+</script>
+</body>
+</html>
+
+
+
+		
+		
+
+		

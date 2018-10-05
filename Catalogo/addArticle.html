@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<title>javyjaja</title>
+    
+	<!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/modern-business.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="css/responsive.css">
+	
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+</head>
+<body>
+
+	<div class="header">
+		<!-- NAV -->
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<img src="img/fondoTransparenteChico.png" alt="fondo">
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a href="about.html">MENU 1</a>
+						</li>
+						<li>
+							<a href="services.html">Menu 2</a>
+						</li>
+						<li>
+							<a href="contact.html">Men 3</a>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Agregar <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="addArticle.html">Producto</a>
+								</li>
+								<li>
+									<a href="portfolio-2-col.html">Submenu 2</a>
+								</li>
+								<li>
+									<a href="portfolio-3-col.html">Sub menius 3</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container -->
+		</nav><!-- NAV_Fin -->
+	</div>
+	<br />
+	<div class="container">
+		<form enctype="multipart/form-data" method="POST" id="formGuardar">
+		<input type="text" value="1" name="usuarioId" style="display:none;">
+			<div class="row">
+		
+			<div class="col-md-12">&nbsp;&nbsp;&nbsp;</div>
+			<div class="col-md-12">&nbsp;&nbsp;&nbsp;</div>
+			<div class="col-md-5 ">
+				<div class="form-group">
+					<label for="Nombre">Nombre del articulo:</label>
+					<input type="text" class="form-control" id="Nombre" name="Nombre"><br />
+					<label for="Descripcion">Descripcion:</label>
+					<input type="text" class="form-control" id="Descripcion" name="Descripcion">
+				</div>
+				<div class="form-group">
+					<label for="categoria">Categoria:</label>
+					<select class="form-control" id="categoria" name="categoria">
+						<option value="1">Opcion 1</option>
+						<option value="2">Opcion 2</option>
+						<option value="3">Opcion 3</option>
+						<option value="0">AGREGAR CATEGORIA</option>
+					</select> 
+				</div>
+			</div>
+			<div class="col-md-5">
+			<div class="imagenMediana" >
+			<img class="imgchica" id="imgPrev" src="">
+			</div>
+		
+			<input id="uploadedfile" name="uploadedfile" type="file" class="btn btn-xs btn-primary" onchange="mostrarImagen(this);return false;" />
+			
+			</div>
+			<div class="col-md-5">
+				FILTROS<br /><br />
+				<div class="form-group">
+					<label for="color">Color:</label>
+					<select class="form-control" id="color">
+						<option value="1">Blanco</option>
+						<option value="2">Negro</option>
+						<option value="3">Verde</option>
+						<option value="0">AGREGAR COLOR</option>
+					</select> 
+				</div>
+				<div class="form-group">
+					<label for="tamano">Tamaño:</label>
+					<select class="form-control" id="tamano">
+						<option value="1">Chico</option>
+						<option value="2">Mediano</option>
+						<option value="3">Grande</option>
+						<option value="0">AGREGAR TAMAÑO</option>
+					</select> 
+				</div>
+			</div>
+			<div class="col-md-5">
+				CARACTERISTICAS<br /><br />
+				<div>
+				<table>
+					<tr><td>Caracteristica</td><td>Valor</td></tr>
+					<tr><td><input type="text" class="form-control" id="car1"></td><td><input type="text" class="form-control" id="val1"></td></tr>
+					<tr><td><input type="text" class="form-control" id="car2"></td><td><input type="text" class="form-control" id="val2"></td></tr>
+					<tr><td><input type="text" class="form-control" id="car3"></td><td><input type="text" class="form-control" id="val3"></td></tr>
+				</table>
+				<br />
+				
+				<input class="btn btn-md btn-primary" type="submit" value="Agregar" />
+				</div>
+			</div>
+		</div>
+	</div>
+			</div>
+	    </form>
+	</div>	
+	<script src="js/jquery.js"></script>
+	<script>
+	    function mostrarImagen(imagen) {
+			if (imagen.files && imagen.files[0]) {
+				var reader = new FileReader();
+				reader.onload = function (e) {
+					$('#imgPrev').attr('src', e.target.result);
+				}
+				reader.readAsDataURL(imagen.files[0]);
+			}
+		}
+		
+		$(function(){
+			$("#formGuardar").on("submit", function(e){
+				e.preventDefault();
+				var f = $(this);
+				var formData = new FormData(document.getElementById("formGuardar"));
+				formData.append("dato", "valor");
+				//formData.append(f.attr("name"), $(this)[0].files[0]);
+				$.ajax({
+					url: "php/uploader.php",
+					type: "post",
+					dataType: "html",
+					data: formData,
+					cache: false,
+					contentType: false,
+					processData: false
+				})
+                .done(function(res){
+                    alert("Respuesta: " + res);
+                });
+			});
+		});
+	</script>
+</body>
+</html>

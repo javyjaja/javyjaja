@@ -1,0 +1,94 @@
+.headerIndex {
+    display: flex;
+    height: 100vh;
+    background: url(../img/bg.jpg) no-repeat center top;
+    background-size: cover;
+    flex-direction: column;
+    align-items: stretch;
+   
+}
+
+.encabezado{
+    flex: 1 1 100%;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    justify-content: center;
+   
+}
+
+.encabezado .a
+{
+    flex:1 1 100%;
+    
+}
+.encabezado .a div{
+   display: flex;
+    height: 120px;
+}
+.encabezado .a div div{
+    padding-left: 27px;
+}
+.encabezado div{
+    height: 20vh;
+}
+
+h1{
+    color: #666666;
+    
+}
+
+.encabezado .a div:hover h1,
+.encabezado .a div:hover h1 small{
+    color:#030303;
+}
+.flecha-bajar{
+        text-align: center;
+    }
+
+.flecha-bajar a{
+    display:inline-block;
+    color: #555555;
+    font-size: 4rem;
+    animation: flecha-animada 2s ease-in-out infinite;
+}
+
+@keyframes flecha-animada{
+    from{
+        transform: translateY(0);
+    }
+    50%
+    {
+        transform: translateY(7px);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
+@media (max-width:1350px){
+    .flecha-bajar a{
+        color:#fff;
+    }
+}
+
+/* Celular Q6+ */
+@media screen and (max-width:500px){
+    .flecha-bajar{
+        text-align: left;
+        padding-left: 20px;
+        padding-bottom: 50px;
+        font-size: 3rem;
+    }
+    h1,
+    {
+        font-size: 26px;
+        color:#030303;
+    }
+    h1 small{
+       color:#030303; 
+    }
+    .btn-light {
+    background-color: rgba(255,255,255,0.4);
+}
+}
