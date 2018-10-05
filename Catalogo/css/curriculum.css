@@ -38,10 +38,35 @@ z-index: 100;
 }
 .imgSelphi2{
 	position: absolute;
-	left: 70%;
-	top:5%;
-	min-height: 200px;
-	width: 70%;
+	left: 73%;
+	top:6%;
+	
+	width: 55%;
 	z-index: 105;
 	background-color: transparent;
+}
+.profile-name {
+    font-size: 22px;
+    line-height: 1.4;
+   
+}
+.bodyCV{
+    font-family: 'Open Sans',sans-serif;
+}
+.titulo{
+padding: 86px 0px 0px 17px;
+}
+
+.left ul{
+	padding-top: 100px;
+}
+.left ul li{
+	list-style : none;
+	font-size: 20px;
+	color: #DDDDDD;
+	line-height: 1.6;
+	
+}
+.left ul li:hover{
+	color: orange;
 }

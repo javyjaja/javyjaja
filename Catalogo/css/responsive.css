@@ -29,10 +29,10 @@
 .pdf{ width:80px;}
 .pdf:hover{ cursor:pointer;width:83px;}
 .subtitulo{	font-size:16px;}
-.subtituloCV{font-size:16px;font-weight:bold;color:#777; font-family:Trebuchet MS,Tahoma,Verdana,Arial,sans-serif;}
+.subtituloCV{font-size:16px;font-weight:bold;color:#555555; font-family:'Open Sans',sans-serif;}
 #tabs{min-height:550px;}
 .titulo{font-size:16px;	font-weight:bold;}
-.tituloCV{font-size:20px;	font-weight:bold;color:#777; font-family:Trebuchet MS,Tahoma,Verdana,Arial,sans-serif;}
+.tituloCV{font-size:20px;	font-weight:bold;color:#000000; font-family:'Open Sans',sans-serif;}
 @media(min-width:800px){
 	.fill{min-height:450px;height: 450px;max-height:450px;}
 }
